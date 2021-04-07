@@ -8,7 +8,7 @@ const ManageProduct = () => {
 
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/getProducts")
+        fetch("https://immense-waters-73433.herokuapp.com/getProducts")
         .then(response =>response.json())
         .then(data => setProducts(data))
     }, [products])

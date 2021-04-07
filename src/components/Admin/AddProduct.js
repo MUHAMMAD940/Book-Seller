@@ -13,7 +13,7 @@ const AddProduct = () => {
             price: data.price,
             imageURL: imageURL,
         }
-        fetch("http://localhost:5000/addProduct", {
+        fetch("https://immense-waters-73433.herokuapp.com/addProduct", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

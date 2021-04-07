@@ -4,7 +4,7 @@ const DataTable = props => {
 
   const {name, price, _id} = props.product
   const deleteProduct = (id) => {
-    fetch(`http://localhost:5000/delete/${id}`, {
+    fetch(`https://immense-waters-73433.herokuapp.com/delete/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())
