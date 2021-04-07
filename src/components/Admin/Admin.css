@@ -1,0 +1,13 @@
+#adminSection {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+}
+.sideNav h2 {
+    text-align: center;
+}
+.navBar p,
+button {
+    display: block;
+}

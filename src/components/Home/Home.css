@@ -1,0 +1,10 @@
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    margin-top : 50px;
+}
+.d-flex {
+    justify-content: space-between;
+}
