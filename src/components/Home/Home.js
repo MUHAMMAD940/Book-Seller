@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Header from '../Header/Header';
 import SingleProduct from './SingleProduct';
 import "./Home.css"
+import { CircularProgress } from '@material-ui/core';
 
 const Home = () => {
 
@@ -17,15 +18,12 @@ const Home = () => {
     return (
         <div className="container">
             <div className="row">
-                <div className="col">
-                <div className="card h-100">
-                    <div className="card-body">
-                        <div className="products">
-                            {products.map(product => <SingleProduct key={product._id} product={product} />)}
-                        </div>
-                    </div>
-                  </div>  
+                 <div className="products">
+                    {
+                        products.length === 0 && <CircularProgress color="secondary" className="spinner-control" />
+                    }
                 </div>
+                {products.map(product => <SingleProduct key={product._id} product={product} />)}
             </div>
         </div>
        
