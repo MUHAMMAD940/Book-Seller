@@ -2,10 +2,11 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 
 const SingleProduct = (props) => {
-    const {name, imageURL, price } = props.product
+    const {_id, name, imageURL, price } = props.product
 
     console.log(imageURL)
 
@@ -19,7 +20,8 @@ const SingleProduct = (props) => {
                   <Card.Title>{name}</Card.Title>
                   <div className="d-flex">
                       <h3>${price}</h3>
-                      <button type="button" className="btn btn-primary">BUY NOW</button>
+                      <Link to={`/checkout/${_id}`} className="btn btn-success">Buy Now</Link>
+                      {/* <button type="button" className="btn btn-primary">BUY NOW</button> */}
                   </div>
                 </Card.Body>
             </Card> 
